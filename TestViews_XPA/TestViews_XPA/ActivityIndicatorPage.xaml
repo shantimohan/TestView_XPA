@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.ActivityIndicatorPage">
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,0">
+            <Label Text="Activity Indicator"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnStartActivity"
+                        AutomationId="btnStartActivity"
+                        Text="Start Activity"
+                        Clicked="btnStartActivity_Clicked" />
+
+                <Button x:Name="btnStopActivity"
+                        AutomationId="btnStopActivity"
+                        Text="Stop Activity"
+                        Clicked="btnStopActivity_Clicked" />
+            </StackLayout>
+
+            <ActivityIndicator x:Name="busyIndicator"
+                               AutomationId="BusyIndicator"
+                               Color="Red"
+                               HorizontalOptions="Center"
+                               VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

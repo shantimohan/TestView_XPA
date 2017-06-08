@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.BoxViewPage">
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,0">
+            <Label Text="Box View"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnChangeColor1"
+                        AutomationId="btnChangeColor1"
+                        Text="Change Color - 1"
+                        Clicked="btnChangeColor1_Clicked" />
+
+                <Button x:Name="btnChangeColor2"
+                        AutomationId="btnChangeColor2"
+                        Text="Change Color - 2"
+                        Clicked="btnChangeColor2_Clicked" />
+            </StackLayout>
+
+            <BoxView x:Name="bvMyBox"
+                     AutomationId="bvMyBox"
+                     Color="Blue"
+                     WidthRequest="150"
+                     HeightRequest="150"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand"
+                     Focused="bvMyBox_Focused"
+                     Unfocused="bvMyBox_Unfocused" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
