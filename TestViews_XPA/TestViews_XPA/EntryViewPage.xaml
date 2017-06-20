@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.EntryViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Entry View"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+            <StackLayout>
+                <Label Text="Username:"
+                       FontSize="Medium"
+                       HorizontalOptions="StartAndExpand"
+                       Margin="20,20,20,0" />
+                <Entry x:Name="entUserName"
+                       AutomationId="entUserName"
+                       WidthRequest="200"
+                       HorizontalOptions="StartAndExpand"
+                       Margin="20,0,20,0"
+                       Placeholder="Username" />
+
+                <Label Text="Password:"
+                       FontSize="Medium"
+                       HorizontalOptions="StartAndExpand"
+                       Margin="20,20,20,0" />
+                <Entry x:Name="entPassword"
+                       AutomationId="entPassword"
+                       WidthRequest="200"
+                       HorizontalOptions="StartAndExpand"
+                       Margin="20,0,20,0"
+                       IsPassword="True"
+                       Placeholder="Password" />
+
+                <Button x:Name="btnLogin"
+                        AutomationId="btnLogin"
+                        Text="Login"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        BackgroundColor="Blue"
+                        TextColor="White"
+                        WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Clicked="btnLogin_Clicked" />
+
+                <Label x:Name="lblLoginResult"
+                       AutomationId="lblLoginResult"
+                       FontSize="Medium"
+                       Text="Login Result Here"
+                       Margin="0,20,0,0"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

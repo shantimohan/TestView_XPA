@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.EditorViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Editor View"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <Editor x:Name="ediMyEditor"
+                    AutomationId="ediMyEditor"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="300"
+                    HeightRequest="500"
+                    FontSize="Medium"
+                    FontAttributes="Italic"
+                    BackgroundColor="Aqua"
+                    TextColor="Blue"
+                    Text="Every Graphical User Interface needs a way for the user to type in multiline text." />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

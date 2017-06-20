@@ -6,24 +6,165 @@
              Title="Test XF Views">
 
     <StackLayout Orientation="Vertical"
-                 Margin="0,20,0,0">
+                 Margin="10,20,10,5">
         <Label Text="Welcome to ESM Smart Solutions!"
                FontSize="Large"
                FontAttributes="Bold"
                VerticalOptions="Center"
                HorizontalOptions="Center" />
 
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand">
             <Button x:Name="btnActivityIndicator"
                     AutomationId="btnActivityIndicator"
+                    WidthRequest="160"
                     Clicked="btnActivityIndicator_Clicked"
+                    TextColor="White"
+                    BackgroundColor="Blue"
                     Text="Test Activity Indicator"/>
 
             <Button x:Name="btnBoxView"
                     AutomationId="btnBoxView"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
                     Clicked="btnBoxView_Clicked"
+                    TextColor="White"
+                    BackgroundColor="Blue"
                     Text="Test Box View"/>
 
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnDatePickerView"
+                    AutomationId="btnDatePickerView"
+                    WidthRequest="160"
+                    Clicked="btnDatePickerView_Clicked"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Text="Test Date Picker View" />
+
+            <Button x:Name="btnEditorView"
+                    AutomationId="btnEditorView"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Test Editor View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnEditorView_Clicked" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnEntryView"
+                    AutomationId="btnEntryView"
+                    WidthRequest="160"
+                    Text="Test Entry View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnEntryView_Clicked" />
+
+            <Button x:Name="btnImageView"
+                    AutomationId="btnImageView"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Test Image View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnImageView_Clicked" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnListView"
+                    AutomationId="btnListView"
+                    WidthRequest="160"
+                    Text="Test List View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnListView_Clicked" />
+
+            <Button x:Name="btnPickerViewPage"
+                    AutomationId="btnPickerViewPage"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Test Picker View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnPickerViewPage_Clicked" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnProgressBarPage"
+                    AutomationId="btnProgressBarPage"
+                    WidthRequest="160"
+                    Text="Test Progress Bar"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnProgressBarPage_Clicked" />
+
+            <Button x:Name="btnSearchBarPage"
+                    AutomationId="btnSearchBarPage"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Test Search Bar"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnSearchBarPage_Clicked" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnStepperViewPage"
+                    AutomationId="btnStepperViewPage"
+                    WidthRequest="160"
+                    Text="Test Stepper View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnStepperViewPage_Clicked" />
+
+            <Button x:Name="btnSwitchViewPage"
+                    AutomationId="btnSwitchViewPage"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Test Switch View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnSwitchViewPage_Clicked" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnTableViewPage"
+                    AutomationId="btnTableViewPage"
+                    WidthRequest="160"
+                    Text="Test TableView"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnTableViewPage_Clicked" />
+
+            <Button x:Name="btnTimePickerPage"
+                    AutomationId="btnTimePickerPage"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Test TimePicker View"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnTimePickerPage_Clicked" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="btnWebViewPage"
+                    AutomationId="btnWebViewPage"
+                    WidthRequest="160"
+                    Text="Test WebView"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnWebViewPage_Clicked" />
+
+            <Button x:Name="btnToolbarItems"
+                    AutomationId="btnToolbarItems"
+                    WidthRequest="160"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Test Toolbar Items"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    Clicked="btnToolbarItems_Clicked" />
         </StackLayout>
 
     </StackLayout>

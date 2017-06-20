@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.ImageViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Image View"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <Button x:Name="btnTranslateImage"
+                    AutomationId="btnTranslateImage"
+                    Text="Translate Image"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Clicked="btnTranslateImage_Clicked" />
+
+            <Image x:Name="imgMyImage"
+                   AutomationId="imgMyImage"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center">
+                
+            </Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

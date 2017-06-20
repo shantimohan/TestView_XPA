@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.SearchBarPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="SearchBar View"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <SearchBar x:Name="sbMySearchBar"
+                       AutomationId="sbMySearchBar"
+                       Placeholder="Enter Search term" />
+
+            <ScrollView VerticalOptions="FillAndExpand">
+                <Label x:Name="lblResults"
+                       AutomationId="lblResults"
+                       Text="Results will appear here"
+                       FontSize="Medium"
+                       VerticalOptions="FillAndExpand" />
+            </ScrollView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

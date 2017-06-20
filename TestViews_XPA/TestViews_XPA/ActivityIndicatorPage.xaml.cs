@@ -19,12 +19,16 @@ namespace TestViews_XPA
 
         private void btnStartActivity_Clicked(object sender, EventArgs e)
         {
+            btnStartActivity.IsEnabled = false;
             busyIndicator.IsRunning = true;
+            btnStopActivity.IsEnabled = true;
         }
 
         private void btnStopActivity_Clicked(object sender, EventArgs e)
         {
+            btnStopActivity.IsEnabled = false;
             busyIndicator.IsVisible = false;
+            btnStartActivity.IsEnabled = true;
         }
     }
 }

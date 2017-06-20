@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.TableViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="TableView (Forms Intent)"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <TableView x:Name="tvMyTableViewForm"
+                       AutomationId="tvMyTableViewForm"
+                       Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Personal Details Section">
+                        <TextCell x:Name="tcFullName"
+                                  AutomationId="tcFullName"
+                                  Text="Full Name"
+                                  Detail="Enter First Name and Last Name only." />
+                        <EntryCell x:Name="ecFirstName"
+                                   AutomationId="ecFirstName"
+                                   Label="First Name"
+                                   Text="Enter Full Name here" />
+                        <EntryCell x:Name="ecLastName"
+                                   AutomationId="ecLastName"
+                                   Label="Last Name"
+                                   Text="Enter Last Name here" />
+                        <SwitchCell x:Name="scCitizen"
+                                    AutomationId="scCitizen"
+                                    Text="Are you citizen" />
+                        <ImageCell x:Name="icPhoto"
+                                   AutomationId="icPhoto"
+                                   Text="File Name: XamarinLogo.png"
+                                   Detail="This is Xamarin Logo"
+                                   ImageSource="XamarinLogo.png" />
+                    </TableSection>
+                    <TableSection Title="Employment Details Section">
+                        <TextCell Text="TextCell"
+                                  Detail="TextCell Detail" />
+                        <EntryCell Label="Entry Label" 
+                                   Text="EntryCell Text" />
+                        <SwitchCell Text="SwitchCell Text" />
+                        <ImageCell Text="ImageCell Text"
+                                   Detail="ImageCell Detail"
+                                   ImageSource="XamarinLogo.png" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

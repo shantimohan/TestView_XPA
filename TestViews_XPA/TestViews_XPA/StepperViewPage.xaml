@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestViews_XPA.StepperViewPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Stepper View"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" />
+
+            <Stepper x:Name="stpMyStepper"
+                     AutomationId="stpMyStepper"
+                     Minimum="0"
+                     Maximum="10"
+                     Value="5"
+                     Increment="1"
+                     ValueChanged="stpMyStepper_ValueChanged"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand" />
+
+            <Label x:Name="lblStepperValue"
+                   AutomationId="lblStepperValue"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
