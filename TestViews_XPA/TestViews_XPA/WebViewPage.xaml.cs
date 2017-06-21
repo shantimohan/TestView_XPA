@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+//TODO In iOS simulator, on Mac or remoted, the web page is not displayed
 namespace TestViews_XPA
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]

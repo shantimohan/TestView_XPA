@@ -5,10 +5,30 @@ using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
+/*
+ * Description:
+ * This constitutes 25 tests for automatically tested the UI views
+ *   available for Xamarin.Forms
+ * 
+ * The list of views is found at: https://developer.xamarin.com/guides/xamarin-forms/user-interface/controls/views/
+ * 
+ * Guidence to designing of the tests is inspired by the following github repo
+ *   https://github.com/brminnick/forms-xtc-guide
+ *   
+ * Change & Test Log:
+ * Jun 20, 2017 - 24 tests pass successfully (in Android - in iOS not run tests)
+ *                   3 of them are not completed (refer to TODO Task list)
+ *              - The test "SetUrlInWebView" fails with error "URL was NOT changed"
+ *              - Created playlist "Android-UITests"
+ *              - Created playlist "iOS-UITests"
+ *              - App runs perfectly in Android emulators (Marshmallow, Lollipop, Kitkat)
+ *              - In iOS simuilator the WebView is not displaying the web page
+ */
+
 namespace TestViews_XPA.UITest
 {
     [TestFixture(Platform.Android)]
-    //[TestFixture(Platform.iOS)]
+    [TestFixture(Platform.iOS)]
     public class Tests
     {
         IApp app;
@@ -98,6 +118,13 @@ namespace TestViews_XPA.UITest
                 app.WaitForElement(x => x.Marked("dpMyDate"), "Timed out", TimeSpan.FromSeconds(timeoutSeconds));
 
                 // Invoke updateDate native Android method on displayed DatePicker
+                /*
+                 * In the github project https://github.com/brminnick/forms-xtc-guide
+                 *   the parts of the date are used directly as below:
+                 *   app.Query(x => x.Class("DatePicker").Invoke("updateDate", date.Year, date.Month, date.Day));
+                 *   
+                 * But actually that didn't work. I don't know why but the date.Month has to be decremented.
+                 */
                 app.Query(x => x.Class("DatePicker").Invoke("updateDate", date.Year, date.Month - 1, date.Day));
 
                 // Tap Ok button to close the DatePicker
@@ -192,6 +219,7 @@ namespace TestViews_XPA.UITest
             app.Back();
         }
 
+        //TODO Check if translated the image view
         [Test]
         [Category("Basic Views")]
         public void TranslateImage()
@@ -240,8 +268,8 @@ namespace TestViews_XPA.UITest
             else
                 strMessage = "";
 
+            app.WaitForElement(x => x.Id("message"));
             var appResult = app.Query("message").FirstOrDefault().Text == strMessage;
-            Assert.IsTrue(appResult, "Wrong item was selected.");
 
             // Tap the Cancel button marked as OK to dismiss the message alert
             app.Tap("button2");
@@ -251,8 +279,12 @@ namespace TestViews_XPA.UITest
 
             // Exit app
             app.Back();
+
+            Assert.IsTrue(appResult, "Wrong item was selected.");
         }
 
+        //TODO Pick a color and assert if it is selected
+        //  Need to know the respective native method to use in Invoke()
         [Test]
         [Category("Pickers")]
         public void SelectColorInPicker()
@@ -391,6 +423,7 @@ namespace TestViews_XPA.UITest
             app.Back();
         }
 
+        //TODO Check how to test TalbeView
         [Test]
         [Category("Data Views")]
         public void ReadAndSetTableViewCells()
@@ -465,6 +498,7 @@ namespace TestViews_XPA.UITest
             return true;
         }
 
+        //TODO Test Fails: URL not changed
         [Test]
         [Category("Web and Search")]
         public void SetUrlInWebView()
@@ -540,11 +574,11 @@ namespace TestViews_XPA.UITest
             app.Back();
         }
 
-        //[Test]
-        //public void Start_REPL()
-        //{
-        //    app.Repl();
-        //}
+        [Test]
+        public void Start_REPL()
+        {
+            app.Repl();
+        }
     }
 }
 

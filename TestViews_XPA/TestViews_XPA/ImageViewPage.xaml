@@ -20,9 +20,7 @@
             <Image x:Name="imgMyImage"
                    AutomationId="imgMyImage"
                    HorizontalOptions="Center"
-                   VerticalOptions="Center">
-                
-            </Image>
+                   VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

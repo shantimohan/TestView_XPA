@@ -21,7 +21,7 @@ namespace TestViews_XPA
             switch(Device.RuntimePlatform)
             {
                 case Device.iOS:
-                    strImageUri = "Default.png";
+                    strImageUri = "icon-76.png";
                     break;
                 case Device.Android:
                     strImageUri = "icon.png";

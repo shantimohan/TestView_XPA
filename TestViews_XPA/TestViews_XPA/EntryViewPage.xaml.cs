@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+// This validates only for the fixed username and passwords
+//    to validate both valid and invalid cases. This doesn't access
+//    any external authentication sites. This is only to test the
+//    Entry and not to test authentication as such.
+
 namespace TestViews_XPA
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
