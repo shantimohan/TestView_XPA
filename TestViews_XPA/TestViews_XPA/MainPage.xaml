@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TestViews_XPA"
              x:Class="TestViews_XPA.MainPage"
+             BackgroundImage="MainPageImage.png"
              Title="Test XF Views">
 
     <StackLayout Orientation="Vertical"
