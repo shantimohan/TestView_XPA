@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace TestViews_XPA
 {
@@ -32,12 +33,19 @@ namespace TestViews_XPA
                 HorizontalOptions = LayoutOptions.Center
             };
 
-            Picker pkrMyPicker = new Picker
+            Xamarin.Forms.Picker pkrMyPicker = new Xamarin.Forms.Picker
             {
                 AutomationId = "pkrMyPicker",
                 Title = "Color",
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
+
+            // Codes as per http://blog.pieeatingninjas.be/2017/07/06/bind-to-xamarin-picker-but-only-update-value-after-hitting-done-on-ios/
+            //   This is to change the bound control only when the Done button is pressed only in iOS.
+            //   The "using Xamarin.Forms.PlatformConfiguration.iOSSpecific;" is also need to be added.
+            //   This makes the Picker an ambiguous object. So it is addressed explicitly as
+            //   Xamarin.Forms.Picker just above.
+            pkrMyPicker.On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 
             foreach (string colorName in nameToColor.Keys)
             {
