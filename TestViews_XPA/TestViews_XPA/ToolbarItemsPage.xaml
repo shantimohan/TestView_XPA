@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Test Toolbar Items"
              x:Class="TestViews_XPA.ToolbarItemsPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="tbiAccept"
@@ -14,6 +15,48 @@
                      Text="Cancel"
                      Clicked="tbiCancel_Clicked"
                      Icon="cancel.png" />
+
+        <!--<ToolbarItem x:Name="tbiCancel1"
+                     AutomationId="tbiCancel1"
+                     Text="Cancel1"
+                     Clicked="tbiCancel_Clicked"
+                     Icon="cancel.png" />
+
+        <ToolbarItem x:Name="tbiCancel2"
+                     AutomationId="tbiCancel2"
+                     Text="Cancel2"
+                     Clicked="tbiCancel_Clicked"
+                     Icon="cancel.png" />
+
+        <ToolbarItem x:Name="tbiCancel3"
+                     AutomationId="tbiCancel3"
+                     Text="Cancel3"
+                     Clicked="tbiCancel_Clicked"
+                     Icon="cancel.png" />
+
+        <ToolbarItem x:Name="tbiCancel4"
+                     AutomationId="tbiCancel4"
+                     Text="Cancel4"
+                     Clicked="tbiCancel_Clicked"
+                     Icon="cancel.png" />
+
+        <ToolbarItem x:Name="tbiCancel5"
+                     AutomationId="tbiCancel5"
+                     Text="Cancel5"
+                     Clicked="tbiCancel_Clicked"
+                     Icon="cancel.png" />
+
+        <ToolbarItem x:Name="tbiCancel6"
+                     AutomationId="tbiCancel6"
+                     Text="Cancel6"
+                     Clicked="tbiCancel_Clicked"
+                     Icon="cancel.png" />
+
+        <ToolbarItem x:Name="tbiAccept7"
+                     AutomationId="tbiAccept7"
+                     Text="Accept7"
+                     Clicked="tbiAccept_Clicked"
+                     Icon="accept.png" />-->
     </ContentPage.ToolbarItems>
   
     <ContentPage.Content>

@@ -547,7 +547,7 @@ namespace TestViews_XPA.UITest
         {
             // Go to Toolbar Items Page
             app.Tap("btnToolbarItems");
-
+            
             if (TBI2Press == "Accept")
             {
                 if (platform == Platform.Android)
@@ -574,11 +574,11 @@ namespace TestViews_XPA.UITest
             app.Back();
         }
 
-        [Test]
-        public void Start_REPL()
-        {
-            app.Repl();
-        }
+        //[Test]
+        //public void Start_REPL()
+        //{
+        //    app.Repl();
+        //}
     }
 }
 

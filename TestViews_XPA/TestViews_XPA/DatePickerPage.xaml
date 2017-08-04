@@ -13,6 +13,7 @@
                         AutomationId="dpMyDate"
                         Format="ddd d MMM yyyy"
                         WidthRequest="150"
+                        DateSelected="dpMyDate_DateSelected"
                         HorizontalOptions="Center"
                         VerticalOptions="CenterAndExpand" />
         </StackLayout>

@@ -12,9 +12,16 @@ namespace TestViews_XPA
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DatePickerPage : ContentPage
     {
+        DateTime dateSelected;
+
         public DatePickerPage()
         {
             InitializeComponent();
+        }
+
+        private void dpMyDate_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            dateSelected = dpMyDate.Date;
         }
     }
 }
